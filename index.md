@@ -1,3 +1,9 @@
+---
+title: "Home"
+layout: single
+author_profile: true
+---
+
 # Marha Midhatiey
 
 > **AI Engineer | Applied AI Research | LLMs & Deep Learning**
