@@ -4,8 +4,6 @@ layout: single
 author_profile: true
 ---
 
-# Marha Midhatiey
-
 > **AI Engineer | Applied AI Research | LLMs & Deep Learning**
 > Industry-focused AI engineer with strong research foundations in large language models, reasoning, and deep learning systems.
 
