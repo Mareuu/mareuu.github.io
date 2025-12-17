@@ -1,10 +1,8 @@
 ---
-title: "Projects & Research"
+title: "🔬 Projects & Research"
 permalink: /projects/
 layout: single
 ---
-
-## 🔬 Research & Projects
 
 ### Tracing and Correcting Programs: Critic-Guided Synthesis for Visual Reasoning
 
