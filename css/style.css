@@ -89,3 +89,21 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.tag {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+  color: black;
+}
