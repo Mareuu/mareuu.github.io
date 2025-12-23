@@ -46,9 +46,14 @@ body {
 
 /* Sections */
 .section {
-  padding: 120px 40px;
-  max-width: 900px;
-  margin: auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hero {
