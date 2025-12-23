@@ -5,9 +5,20 @@
   font-family: 'Inter', sans-serif;
 }
 
+:root {
+  --bg-dark: #0b0f1a;
+  --glass: rgba(255, 255, 255, 0.08);
+  --neon-blue: #4cc9f0;
+  --neon-purple: #9b5de5;
+  --text-main: #eaeaea;
+}
+
 body {
-  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-  color: white;
+  background:
+    radial-gradient(circle at top right, #1b2a4e, transparent),
+    radial-gradient(circle at bottom left, #2a0f3d, transparent),
+    var(--bg-dark);
+  color: var(--text-main);
 }
 
 /* Navbar */
@@ -56,9 +67,20 @@ body {
 
 /* Cards */
 .card {
-  background: rgba(255,255,255,0.1);
-  padding: 20px;
-  border-radius: 16px;
-  margin-top: 20px;
-  backdrop-filter: blur(12px);
+  background: var(--glass);
+  border-radius: 20px;
+  padding: 24px;
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 0 20px rgba(76, 201, 240, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 35px rgba(155, 93, 229, 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
 }
