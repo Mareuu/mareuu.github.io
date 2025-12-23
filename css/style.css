@@ -137,3 +137,44 @@ html {
   box-shadow: 0 0 30px rgba(0,255,255,0.15);
 }
 
+.projects {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 0 20px rgba(0,255,255,0.2);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+form input, form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+}
+
+button {
+  background: linear-gradient(90deg, #00f5ff, #9b5de5);
+  border: none;
+  padding: 12px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
