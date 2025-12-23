@@ -61,6 +61,14 @@ body {
   padding-top: 160px;
 }
 
+.hero-image img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 3px solid #00f5ff;
+  box-shadow: 0 0 25px rgba(0,245,255,0.6);
+}
+
 /* Avatar */
 .avatar {
   width: 160px;
@@ -117,5 +125,15 @@ html {
 .contact-links a:hover {
   color: var(--neon-purple);
   text-shadow: 0 0 8px rgba(155, 93, 229, 0.8);
+}
+
+.glass {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 40px;
+  margin: 80px auto;
+  width: 80%;
+  box-shadow: 0 0 30px rgba(0,255,255,0.15);
 }
 
