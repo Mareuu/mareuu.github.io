@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Sections */
+.section {
+  padding: 120px 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero {
+  text-align: center;
+  padding-top: 160px;
+}
+
+/* Avatar */
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.6);
+  margin-bottom: 20px;
+}
+
+/* Cards */
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 16px;
+  margin-top: 20px;
+  backdrop-filter: blur(12px);
+}
