@@ -107,3 +107,15 @@ html {
   background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
   color: black;
 }
+
+.contact-links a {
+  color: var(--neon-blue);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-links a:hover {
+  color: var(--neon-purple);
+  text-shadow: 0 0 8px rgba(155, 93, 229, 0.8);
+}
+
