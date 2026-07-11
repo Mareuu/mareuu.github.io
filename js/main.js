@@ -1,19 +1,18 @@
-const sections = document.querySelectorAll('.section');
+// Target all tab navigation buttons and tab panel sections
+const tabs = document.querySelectorAll('.tab-btn');
+const contents = document.querySelectorAll('.tab-content');
 
-const reveal = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        // Optional: stop observing once shown to optimize performance
-        reveal.unobserve(entry.target); 
-      }
-    });
-  },
-  { 
-    threshold: 0.1, // Triggers slightly earlier for smoother presentation
-    rootMargin: "0px 0px -50px 0px"
-  }
-);
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // 1. Deactivate active styling on previous tab buttons
+    tabs.forEach(btn => btn.classList.remove('active'));
+    // 2. Hide all existing content panels
+    contents.forEach(content => content.classList.remove('active'));
 
-sections.forEach(section => reveal.observe(section));
+    // 3. Highlight the clicked tab button
+    tab.classList.add('active');
+    // 4. Reveal the corresponding target section panel
+    const targetTab = tab.getAttribute('data-tab');
+    document.getElementById(targetTab).classList.add('active');
+  });
+});
