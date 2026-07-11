@@ -4,37 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Marha Midhatiey | AI Engineer</title>
-  <!-- Fixed paths so your styling actually loads -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Horizontal Navigation Bar Fixing the Stacking Bug -->
   <nav class="navbar">
     <div class="logo">Marha Midhatiey</div>
     <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><button class="tab-btn active" data-tab="home">Home</button></li>
+      <li><button class="tab-btn" data-tab="about">About</button></li>
+      <li><button class="tab-btn" data-tab="projects">Projects</button></li>
+      <li><button class="tab-btn" data-tab="contact">Contact</button></li>
     </ul>
   </nav>
 
-  <!-- Home / Hero Section -->
-  <section id="home" class="section hero container">
-    <div class="hero-content">
-      <!-- Using your preferred transparent profile image -->
+  <!-- HOME PANEL -->
+  <div id="home" class="tab-content active container">
+    <section class="hero">
       <img src="assets/images/여권인터넷발급용.jpg" alt="Marha Midhatiey" class="avatar"/>
       <h1>I'M MARHA</h1>
       <p class="subtitle">AI Engineer | Applied AI Research | LLMs & Reasoning</p>
-      <div class="contact-links">
-        <a href="#projects" class="btn">View My Work</a>
+      
+      <div class="links-container" style="display: flex; justify-content: center; gap: 20px; font-size: 1.1rem;">
+        <a href="https://github.com/Mareuu" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/marhamidhatiey" target="_blank">LinkedIn</a>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
-  <!-- About Section -->
-  <section id="about" class="section container">
+  <!-- ABOUT PANEL -->
+  <div id="about" class="tab-content container">
     <div class="card">
       <h2 class="section-title">About Me</h2>
       <p>
@@ -42,22 +42,22 @@
         focusing on applied AI research, LLM reasoning, and deep learning systems.
       </p>
     </div>
-  </section>
+  </div>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section container">
+  <!-- PROJECTS PANEL -->
+  <div id="projects" class="tab-content container">
     <h2 class="section-title">Featured Projects</h2>
     
     <div class="grid-layout">
       <!-- Project 1 -->
       <div class="card">
         <h3>Driver Drowsiness Detection</h3>
-        <p class="venue">Computer Vision & Transfer Learning</p>
-        <p>A system for detecting drowsiness in drivers by evaluating eye closure states using transfer learning networks.</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem; font-style: italic;">Computer Vision & Transfer Learning</p>
+        <p style="margin-top: 10px;">A system for detecting drowsiness in drivers by evaluating eye closure states using transfer learning networks.</p>
         <div class="tags">
           <span>Python</span><span>Computer Vision</span><span>Deep Learning</span>
         </div>
-        <div class="contact-links" style="margin-top: 15px;">
+        <div class="links-container" style="margin-top: 15px;">
           <a href="https://github.com/Mareuu/MicrosleepDetection" target="_blank">View Project &rarr;</a>
         </div>
       </div>
@@ -65,39 +65,33 @@
       <!-- Project 2 -->
       <div class="card">
         <h3>Sentiment Analysis</h3>
-        <p class="venue">Natural Language Processing</p>
-        <p>Sentiment Analysis platform tracking public data metrics related to Malaysia Airlines.</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem; font-style: italic;">Natural Language Processing</p>
+        <p style="margin-top: 10px;">Sentiment Analysis platform tracking public data metrics related to Malaysia Airlines.</p>
         <div class="tags">
           <span>Python</span><span>NLP</span><span>Data Analysis</span>
         </div>
-        <div class="contact-links" style="margin-top: 15px;">
+        <div class="links-container" style="margin-top: 15px;">
           <a href="https://github.com/Mareuu/SentimentAnalysisMalaysiaAirlines" target="_blank">View Project &rarr;</a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section container">
-    <div class="card">
-      <h2 class="section-title">Get In Touch</h2>
+  <!-- CONTACT PANEL -->
+  <div id="contact" class="tab-content container">
+    <div class="card" style="max-width: 600px; margin: 0 auto;">
+      <h2 class="section-title" style="text-align: center;">Get In Touch</h2>
       
-      <form action="https://formspree.io/f/mnqewxyz" method="POST" class="list-layout" style="gap: 10px;">
-        <input type="text" name="name" placeholder="Name" required style="background: rgba(255,255,255,0.05); color: #fff; border: 1px solid rgba(255,255,255,0.1); padding: 12px; border-radius: 8px;">
-        <input type="email" name="email" placeholder="Email" required style="background: rgba(255,255,255,0.05); color: #fff; border: 1px solid rgba(255,255,255,0.1); padding: 12px; border-radius: 8px;">
-        <textarea name="message" placeholder="Message" rows="4" style="background: rgba(255,255,255,0.05); color: #fff; border: 1px solid rgba(255,255,255,0.1); padding: 12px; border-radius: 8px; resize: none;"></textarea>
-        <button type="submit" style="margin-top: 10px; font-weight: 600;">Send Message</button>
+      <form action="https://formspree.io/f/mnqewxyz" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+        <input type="text" name="name" placeholder="Name" required style="background: rgba(255,255,255,0.05); color: #fff; border: 1px solid var(--glass-border); padding: 14px; border-radius: 8px; font-size: 0.95rem;">
+        <input type="email" name="email" placeholder="Email" required style="background: rgba(255,255,255,0.05); color: #fff; border: 1px solid var(--glass-border); padding: 14px; border-radius: 8px; font-size: 0.95rem;">
+        <textarea name="message" placeholder="Message" rows="5" required style="background: rgba(255,255,255,0.05); color: #fff; border: 1px solid var(--glass-border); padding: 14px; border-radius: 8px; font-size: 0.95rem; resize: none;"></textarea>
+        
+        <button type="submit" style="background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple)); border: none; padding: 14px; border-radius: 8px; color: #0b0f1a; font-weight: 700; font-size: 1rem; cursor: pointer; transition: opacity 0.2s;">Send Message</button>
       </form>
-
-      <div class="contact-links" style="margin-top: 30px; text-align: center; display: flex; justify-content: center; gap: 20px;">
-        <a href="https://github.com/Mareuu" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/marhamidhatiey" target="_blank">LinkedIn</a>
-      </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Fixed path so your javascript animations run seamlessly -->
   <script src="main.js"></script>
-
 </body>
 </html>
