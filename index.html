@@ -4,89 +4,100 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Marha Midhatiey | AI Engineer</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- Fixed paths so your styling actually loads -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Navigation -->
   <nav class="navbar">
-  <div class="logo">Marha Midhatiey</div>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+    <div class="logo">Marha Midhatiey</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <!-- Home -->
-  <section id="home" class="section hero">
-    <img src="assets/images/profile.jpg" alt="Profile" class="avatar"/>
-    <h1>Marha Midhatiey</h1>
-    <p>AI Engineer · Applied AI Research · LLMs & Deep Learning</p>
+  <!-- Home / Hero Section -->
+  <section id="home" class="section hero container">
+    <div class="hero-content">
+      <!-- Using your preferred transparent profile image -->
+      <img src="assets/images/IMG-4325-removebg-preview.png" alt="Marha Midhatiey" class="avatar"/>
+      <h1>I'M MARHA</h1>
+      <p class="subtitle">AI Engineer | Applied AI Research | LLMs & Reasoning</p>
+      <div class="contact-links">
+        <a href="#projects" class="btn">View My Work</a>
+      </div>
+    </div>
   </section>
 
-  <section id="home" class="hero">
-  <div class="hero-text">
-    <h1>I’M MARHA</h1>
-    <p>AI Engineer | Applied AI Research | LLMs & Reasoning</p>
-    <a href="#projects" class="btn">View My Work</a>
-  </div>
-
-  <div class="hero-image">
-    <img src="assets/images/IMG-4325-removebg-preview.png" alt="Profile">
-  </div>
-</section>
-
-
-  <!-- About -->
-  <section id="about" class="glass">
-  <h2>About Me</h2>
-  <p>
-    I am a Master’s graduate in Artificial Intelligence from GIST,
-    focusing on applied AI research, LLM reasoning, and deep learning systems.
-  </p>
-</section>
-
-  <!-- Projects -->
-<section id="projects">
-  <h2 class="center">Featured Projects</h2>
-
-  <div class="projects">
-    <div class="project-card">
-      <img src="assets/images/project1.png">
-      <h3>Driver Drowsiness Detection using Transfer Learning and Computer Vision</h3>
-      <p>A system for detecting drowsiness in drivers by detecting eye closure using transfer learning.</p>
-      <a href="https://github.com/Mareuu/MicrosleepDetection" target="_blank">View Project</a>
+  <!-- About Section -->
+  <section id="about" class="section container">
+    <div class="card">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        I am a Master’s graduate in Artificial Intelligence from GIST,
+        focusing on applied AI research, LLM reasoning, and deep learning systems.
+      </p>
     </div>
+  </section>
 
-    <div class="project-card">
-      <img src="assets/images/project2.png">
-      <h3>Sentiment Analysis</h3>
-      <p>Sentiment Analysis On Malaysia Airlines.</p>
-      <a href="https://github.com/Mareuu/SentimentAnalysisMalaysiaAirlines" target="_blank">View Project</a>
+  <!-- Projects Section -->
+  <section id="projects" class="section container">
+    <h2 class="section-title">Featured Projects</h2>
+    
+    <div class="grid-layout">
+      <!-- Project 1 -->
+      <div class="card">
+        <h3>Driver Drowsiness Detection</h3>
+        <p class="venue">Computer Vision & Transfer Learning</p>
+        <p>A system for detecting drowsiness in drivers by evaluating eye closure states using transfer learning networks.</p>
+        <div class="tags">
+          <span>Python</span><span>Computer Vision</span><span>Deep Learning</span>
+        </div>
+        <div class="contact-links" style="margin-top: 15px;">
+          <a href="https://github.com/Mareuu/MicrosleepDetection" target="_blank">View Project &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="card">
+        <h3>Sentiment Analysis</h3>
+        <p class="venue">Natural Language Processing</p>
+        <p>Sentiment Analysis platform tracking public data metrics related to Malaysia Airlines.</p>
+        <div class="tags">
+          <span>Python</span><span>NLP</span><span>Data Analysis</span>
+        </div>
+        <div class="contact-links" style="margin-top: 15px;">
+          <a href="https://github.com/Mareuu/SentimentAnalysisMalaysiaAirlines" target="_blank">View Project &rarr;</a>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- Contact -->
-  <section id="contact" class="glass">
-  <h2>Get In Touch</h2>
+  <!-- Contact Section -->
+  <section id="contact" class="section container">
+    <div class="card">
+      <h2 class="section-title">Get In Touch</h2>
+      
+      <form action="https://formspree.io/f/mnqewxyz" method="POST" class="list-layout" style="gap: 10px;">
+        <input type="text" name="name" placeholder="Name" required style="background: rgba(255,255,255,0.05); color: #fff; border: 1px solid rgba(255,255,255,0.1); padding: 12px; border-radius: 8px;">
+        <input type="email" name="email" placeholder="Email" required style="background: rgba(255,255,255,0.05); color: #fff; border: 1px solid rgba(255,255,255,0.1); padding: 12px; border-radius: 8px;">
+        <textarea name="message" placeholder="Message" rows="4" style="background: rgba(255,255,255,0.05); color: #fff; border: 1px solid rgba(255,255,255,0.1); padding: 12px; border-radius: 8px; resize: none;"></textarea>
+        <button type="submit" style="margin-top: 10px; font-weight: 600;">Send Message</button>
+      </form>
 
-  <form action="https://formspree.io/f/mnqewxyz" method="POST">
-    <input type="text" name="name" placeholder="Name" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="message" placeholder="Message"></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+      <div class="contact-links" style="margin-top: 30px; text-align: center; display: flex; justify-content: center; gap: 20px;">
+        <a href="https://github.com/Mareuu" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/marhamidhatiey" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </section>
 
-  <div class="socials">
-    <a href="https://github.com/Mareuu" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/marhamidhatiey" target="_blank">LinkedIn</a>
-  </div>
-</section>
-
-  <script src="js/main.js"></script>
+  <!-- Fixed path so your javascript animations run seamlessly -->
+  <script src="main.js"></script>
 
 </body>
 </html>
