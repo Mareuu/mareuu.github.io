@@ -5,36 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Marha Midhatiey | AI Engineer</title>
   <link rel="stylesheet" href="css/style.css" />
+  
+  <style>
+    .tab-content {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+    }
+    .tab-content.active {
+      display: block;
+      opacity: 1;
+    }
+    
+    /* Publication styling card rules */
+    .pub-card {
+      background: rgba(255, 255, 255, 0.02);
+      border-left: 4px solid var(--neon-blue);
+      border-right: 1px solid rgba(255, 255, 255, 0.05);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 0 8px 8px 0;
+      padding: 16px;
+      margin-top: 15px;
+    }
+    .pub-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 12px;
+      background: rgba(76, 201, 240, 0.1);
+      border: 1px solid rgba(76, 201, 240, 0.3);
+      color: var(--neon-blue);
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .pub-btn:hover {
+      background: var(--neon-blue);
+      color: #0b0f1a;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Horizontal Navigation Bar -->
   <nav class="navbar">
     <div class="logo">Marha Midhatiey</div>
-    <ul class="nav-links">
+    <ul class="nav-links" style="align-items: center;">
       <li><button class="tab-btn active" data-tab="home">Home</button></li>
       <li><button class="tab-btn" data-tab="about">About</button></li>
       <li><button class="tab-btn" data-tab="experience">Experience</button></li>
       <li><button class="tab-btn" data-tab="projects">Projects</button></li>
       <li><button class="tab-btn" data-tab="contact">Contact</button></li>
+      <li style="margin-left: 10px;">
+        <a href="assets/Resume (MarhaMidhatiey).pdf" download class="pub-btn" style="border-radius: 20px; padding: 6px 16px; border-color: var(--neon-purple); color: var(--neon-purple); background: rgba(155, 93, 229, 0.1);">
+          📥 CV
+        </a>
+      </li>
     </ul>
   </nav>
 
-  <!-- HOME PANEL -->
   <div id="home" class="tab-content active container">
     <section class="hero">
-      <img src="assets/images/여권인터넷발급용.jpg" alt="Marha Midhatiey" class="avatar"/>
+      <img src="assets/images/여권인터넷발급용.jpg" alt="Marha Midhatiey" class="avatar"/>
       <h1>Hello, I'm MARHA</h1>
-      <p class="subtitle">AI Engineer | Applied AI Research | LLMs & Reasoning</p>
+      <p class="subtitle" style="margin-bottom: 25px;">AI Engineer | Applied AI Research | LLMs & Reasoning</p>
       
-      <div class="links-container" style="display: flex; justify-content: center; gap: 20px; font-size: 1.1rem;">
+      <div class="links-container" style="display: flex; justify-content: center; align-items: center; gap: 20px; font-size: 1.1rem; flex-wrap: wrap;">
         <a href="https://github.com/Mareuu" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/marhamidhatiey" target="_blank">LinkedIn</a>
+        <a href="assets/Resume (MarhaMidhatiey).pdf" download style="background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple)); color: #0b0f1a; padding: 10px 22px; border-radius: 30px; font-weight: 700; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(76, 201, 240, 0.3);">
+          Download Resume (PDF) 📄
+        </a>
       </div>
     </section>
   </div>
 
-  <!-- ABOUT PANEL -->
   <div id="about" class="tab-content container">
     <div class="card" style="margin-bottom: 30px;">
       <h2 class="section-title">About Me</h2>
@@ -42,7 +89,7 @@
         I am a Master’s graduate in Artificial Intelligence from the Gwangju Institute of Science and Technology (GIST), where I conducted research within the Data Science Lab. My expertise centers on Generative AI, Prompt Engineering, and building complex deep learning systems.
       </p>
       <p style="font-size: 1.1rem;">
-        My work focuses on multiple domain including Hybrid AI for visual reasoning, exploring neural and deep learning approaches to improve AI interpretability, logic execution, and cognitive benchmarks.
+        My work focuses on multiple domains including Hybrid AI for visual reasoning, exploring neural and deep learning approaches to improve AI interpretability, logic execution, and cognitive benchmarks.
       </p>
     </div>
 
@@ -57,8 +104,18 @@
         </ul>
       </div>
 
+      <div class="card" style="border-top: 3px solid var(--neon-purple);">
+        <h3 style="color: var(--neon-purple); margin-bottom: 15px;">💡 Research Philosophy</h3>
+        <p style="font-size: 0.92rem; line-height: 1.5; color: var(--text-muted); margin-bottom: 10px;">
+          <strong>Bridging Neural & Symbolic AI:</strong> I believe the key to robust visual and mathematical reasoning is pairing the fluid intuition of deep neural models with the structured, verifiable guarantees of program synthesis.
+        </p>
+        <p style="font-size: 0.92rem; line-height: 1.5; color: var(--text-muted);">
+          <strong>Optimized Scaling:</strong> Fine-tuning models shouldn't mean wasting compute. I focus on highly targeted, compute-efficient routines (QLoRA, SFT) designed to scale efficiently on limited hardware constraints.
+        </p>
+      </div>
+
       <div class="card">
-        <h3 style="color: var(--neon-purple); margin-bottom: 15px;">Technical Stack</h3>
+        <h3 style="color: var(--neon-blue); margin-bottom: 15px;">Technical Stack</h3>
         <div class="tags">
           <span>Python</span><span>C++</span><span>Java</span><span>PyTorch</span>
           <span>Docker</span><span>Linux</span><span>Git</span><span>Kafka</span>
@@ -68,14 +125,13 @@
     </div>
   </div>
 
-  <!-- EXPERIENCE & AWARDS PANEL -->
   <div id="experience" class="tab-content container">
     <h2 class="section-title">Professional Experience</h2>
     <div class="list-layout" style="display: flex; flex-direction: column; gap: 24px; margin-bottom: 50px;">
       
       <div class="card">
         <div style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: baseline;">
-          <h3>Research (Data Science Lab)</h3>
+          <h3>Research Assistant (Data Science Lab)</h3>
           <span style="color: var(--neon-blue); font-weight: 600;">2024 - 2026</span>
         </div>
         <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 12px;">Gwangju Institute of Science and Technology (GIST) | South Korea</p>
@@ -125,14 +181,12 @@
     </div>
   </div>
 
-  <!-- PROJECTS PANEL WITH INTERACTIVE SIMULATIONS -->
   <div id="projects" class="tab-content container">
     <h2 class="section-title">Projects with Interactive Simulations</h2>
     <p style="color: var(--text-muted); margin-bottom: 30px; text-align: center; font-style: italic;"> Click the interactive panels below to run simulated demonstrations of my systems.</p>
     
     <div class="grid-layout">
       
-      <!-- Project 1: AAAI Research Paper (Interactive Loop Simulator with ARC Grid Image) -->
       <div class="card" style="grid-column: span 2 / span 2; border: 1px solid rgba(76, 201, 240, 0.3);">
         <span style="background: rgba(76, 201, 240, 0.1); color: var(--neon-blue); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">Large Language Model (LLM)-based</span>
         <h3 style="margin-top: 10px;">Tracing and Correcting Programs: Critic-Guided Synthesis for Visual Reasoning</h3>
@@ -141,32 +195,41 @@
           Developed an end-to-end LLM-based program generation pipeline focused on LLM interpretability and logic correction systems. Orchestrated systematic prompt validation frameworks and fine-tuned open-source language models using QLoRA, LoRA, and SFT routines.
         </p>
 
-        <!-- SIMULATION 1: Critic-Guided Loop with ARC Task Visualization -->
+        <div class="pub-card">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
+            <span style="background: rgba(76, 201, 240, 0.15); color: var(--neon-blue); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Academic Publication</span>
+            <span style="font-size: 0.8rem; color: #a5b4fc; font-weight: bold;">AAAI 2026 Bridge Program</span>
+          </div>
+          <h4 style="margin: 0 0 6px 0; color: #fff; font-size: 0.95rem;">Tracing and Correcting Programs: Critic-Guided Synthesis for Visual Reasoning</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0 0 12px 0;">
+            <strong>M. M. Rusli</strong>, S. Kim. (Under Review: <em>Data Mining and Knowledge Discovery</em>)
+          </p>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="#" class="pub-btn">📄 Read Preprint</a>
+            <a href="https://github.com/Mareuu" target="_blank" class="pub-btn">💻 Source Code</a>
+          </div>
+        </div>
+
         <div style="margin: 20px 0; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 8px; border: 1px dashed rgba(76, 201, 240, 0.4);">
           <h4 style="color: var(--neon-blue); font-size: 0.95rem; margin-bottom: 12px;">ARC Visual Grid Task: Diagonal Pattern Fill</h4>
           
           <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 15px;">
-            <!-- Input Grid (State Representation) -->
             <div style="text-align: center; flex: 1; min-width: 140px;">
               <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 6px;">Input Grid (Problem)</p>
               <div style="display: inline-grid; grid-template-columns: repeat(3, 30px); gap: 2px; background: #111; padding: 6px; border-radius: 4px;">
-                <div style="width: 30px; height: 30px; background: #3b82f6;"></div> <!-- Blue Block -->
+                <div style="width: 30px; height: 30px; background: #3b82f6;"></div> <div style="width: 30px; height: 30px; background: #000;"></div>
                 <div style="width: 30px; height: 30px; background: #000;"></div>
                 <div style="width: 30px; height: 30px; background: #000;"></div>
                 <div style="width: 30px; height: 30px; background: #000;"></div>
                 <div style="width: 30px; height: 30px; background: #000;"></div>
                 <div style="width: 30px; height: 30px; background: #000;"></div>
                 <div style="width: 30px; height: 30px; background: #000;"></div>
-                <div style="width: 30px; height: 30px; background: #000;"></div>
-                <div style="width: 30px; height: 30px; background: #3b82f6;"></div> <!-- Blue Block -->
-              </div>
+                <div style="width: 30px; height: 30px; background: #3b82f6;"></div> </div>
             </div>
 
-            <!-- Program Output Workspace Grid -->
             <div style="text-align: center; flex: 1; min-width: 140px;">
               <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 6px;">Current Workspace State</p>
               <div style="display: inline-grid; grid-template-columns: repeat(3, 30px); gap: 2px; background: #111; padding: 6px; border-radius: 4px;" id="arc-workspace">
-                <!-- Initial blank workspace -->
                 <div style="width: 30px; height: 30px; background: #3b82f6; transition: background 0.3s;"></div>
                 <div style="width: 30px; height: 30px; background: #000; transition: background 0.3s;"></div>
                 <div style="width: 30px; height: 30px; background: #000; transition: background 0.3s;"></div>
@@ -188,14 +251,12 @@
           </button>
         </div>
 
-        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">Published in: AAAI 2026 Bridge Program.</p>
         <div class="tags">
           <span>Generative AI</span><span>LLM Reasoning</span><span>QLoRA</span><span>Fine-Tuning</span>
         </div>
       </div>
 
-<!-- Project 2: Voice Synthesis (Interactive Player Simulator showing Matches) -->
-<div class="card">
+      <div class="card">
         <span style="background: rgba(155, 93, 229, 0.1); color: var(--neon-purple); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">Deep Learning System</span>
         <h3 style="margin-top: 10px;">How You Sound Like? Voice Synthesis Framework</h3>
         <p style="margin-top: 8px;">Developed an end-to-end voice profile extraction engine matching user vocal signatures onto precise singer target acoustic profiles. Configured data streaming pipelines using Kafka handles.</p>
@@ -221,14 +282,12 @@
         </div>
       </div>
 
-      <!-- Project 3: Driver Drowsiness (Interactive Frame Trigger Simulation) -->
       <div class="card">
         <span style="background: rgba(76, 201, 240, 0.1); color: var(--neon-blue); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">Best Paper Award</span>
         <h3 style="margin-top: 10px;">Driver Drowsiness Detection</h3>
         <p style="color: var(--text-muted); font-size: 0.9rem; font-style: italic; margin-top: 2px;">Computer Vision & Transfer Learning</p>
         <p style="margin-top: 10px;">A real-time vision processing utility analyzing live camera video streams to predict driver microsleep tendencies based on multi-frame facial features.</p>
         
-        <!-- SIMULATION 3: 10-Frame Hold System -->
         <div style="margin: 15px 0; padding: 15px; background: rgba(0,0,0,0.2); border-radius: 8px; border: 1px dashed rgba(76, 201, 240, 0.4); text-align: center;">
           <h4 style="color: var(--neon-blue); font-size: 0.85rem; margin-bottom: 8px;">10-Frame Threshold Window Tester</h4>
           <div style="font-size: 1.1rem; margin-bottom: 6px;">
@@ -242,8 +301,18 @@
           </button>
         </div>
 
-        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">Published in: Journal of Advanced Research in Applied Mechanics.</p>
-        <div class="tags">
+        <div class="pub-card" style="border-left-color: var(--neon-purple); margin-top: 15px;">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
+            <span style="background: rgba(155, 93, 229, 0.15); color: var(--neon-purple); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Journal Article</span>
+            <span style="font-size: 0.8rem; color: #a5b4fc; font-weight: bold;">ISETech 2023</span>
+          </div>
+          <h4 style="margin: 0 0 6px 0; color: #fff; font-size: 0.95rem;">Driver Drowsiness Detection using Transfer Learning and Computer Vision</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0 0 12px 0;">
+            Published in: <em>Journal of Advanced Research in Applied Mechanics</em>
+          </p>
+        </div>
+
+        <div class="tags" style="margin-top: 15px;">
           <span>Python</span><span>Computer Vision</span><span>Deep Learning</span>
         </div>
         <div class="links-container" style="margin-top: 15px;">
@@ -251,7 +320,6 @@
         </div>
       </div>
 
-      <!-- Project 4: Sentiment Analysis -->
       <div class="card">
         <h3>Sentiment Analysis Engine</h3>
         <p style="color: var(--text-muted); font-size: 0.9rem; font-style: italic; margin-top: 2px;">Natural Language Processing</p>
@@ -267,7 +335,6 @@
     </div>
   </div>
 
-  <!-- CONTACT PANEL -->
   <div id="contact" class="tab-content container">
     <div class="card" style="max-width: 600px; margin: 0 auto;">
       <h2 class="section-title" style="text-align: center;">Get In Touch</h2>
@@ -282,7 +349,6 @@
     </div>
   </div>
 
-  <!-- ALL CLIENT SIDE SIMULATION JAVASCRIPT INLINE LOGIC -->
   <script>
     // --- 1. CRITIC GUIDED REASONING SIMULATOR (WITH ARC GRID DYNAMICS) ---
     let steps = 0;
@@ -308,7 +374,7 @@
       }
     }
 
-// --- 2. VOICE STREAM SIMULATOR (WITH ARTIST MATCHES) ---
+    // --- 2. VOICE STREAM SIMULATOR (WITH ARTIST MATCHES) ---
     const targetArtists = [
       { name: "Adele", match: "89.4%" },
       { name: "Ariana Grande", match: "91.2%" },
