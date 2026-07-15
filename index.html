@@ -46,6 +46,45 @@
       background: var(--neon-blue);
       color: #0b0f1a;
     }
+
+    /* Accordion Simulation Drawer */
+    .sim-drawer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+    }
+    .sim-drawer.open {
+      max-height: 500px; /* Adjust to allow full expanding space */
+      margin-top: 15px;
+      border: 1px dashed rgba(255, 255, 255, 0.1);
+    }
+    .sim-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 15px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .sim-toggle-btn:hover {
+      background: rgba(76, 201, 240, 0.1);
+      border-color: var(--neon-blue);
+      color: #fff;
+    }
+    .sim-toggle-btn.active {
+      background: rgba(76, 201, 240, 0.2);
+      border-color: var(--neon-blue);
+      color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -182,16 +221,22 @@
   </div>
 
   <div id="projects" class="tab-content container">
-    <h2 class="section-title">Projects with Interactive Simulations</h2>
-    <p style="color: var(--text-muted); margin-bottom: 30px; text-align: center; font-style: italic;"> Click the interactive panels below to run simulated demonstrations of my systems.</p>
+    <h2 class="section-title">Technical Projects</h2>
+    <p style="color: var(--text-muted); margin-bottom: 30px; text-align: center; font-style: italic;">
+      Explore a structured list of my core academic publications and software engineering systems.
+    </p>
     
-    <div class="grid-layout">
+    <div style="display: flex; flex-direction: column; gap: 24px;">
       
-      <div class="card" style="grid-column: span 2 / span 2; border: 1px solid rgba(76, 201, 240, 0.3);">
-        <span style="background: rgba(76, 201, 240, 0.1); color: var(--neon-blue); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">Large Language Model (LLM)-based</span>
-        <h3 style="margin-top: 10px;">Tracing and Correcting Programs: Critic-Guided Synthesis for Visual Reasoning</h3>
-        <p style="color: var(--text-muted); font-size: 0.9rem; font-style: italic; margin-top: 4px;">Master's Thesis Project</p>
-        <p style="margin-top: 12px;">
+      <div class="card" style="border: 1px solid rgba(76, 201, 240, 0.2);">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: 10px;">
+          <span style="background: rgba(76, 201, 240, 0.1); color: var(--neon-blue); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">Large Language Model (LLM)-based</span>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Master's Thesis Project</span>
+        </div>
+        
+        <h3 style="margin-top: 12px; font-size: 1.3rem;">Tracing and Correcting Programs: Critic-Guided Synthesis for Visual Reasoning</h3>
+        
+        <p style="margin-top: 10px; line-height: 1.6;">
           Developed an end-to-end LLM-based program generation pipeline focused on LLM interpretability and logic correction systems. Orchestrated systematic prompt validation frameworks and fine-tuned open-source language models using QLoRA, LoRA, and SFT routines.
         </p>
 
@@ -205,92 +250,118 @@
             <strong>Marha Midhatiey Rusli</strong>, Donghyeon Shin, Sejin Kim, Sundong Kim (Logical and Symbolic Reasoning in Language Models @ AAAI 2026)
           </p>
           <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-            <a href="https://openreview.net/forum?id=6sB1rHJ1BN" class="pub-btn">📄 Read Preprint</a>
+            <a href="https://openreview.net/forum?id=6sB1rHJ1BN" target="_blank" class="pub-btn">📄 Read Preprint</a>
             <a href="https://github.com/Mareuu/TCP_Tracing" target="_blank" class="pub-btn">💻 Source Code</a>
           </div>
         </div>
 
-        <div style="margin: 20px 0; padding: 20px; background: rgba(0,0,0,0.2); border-radius: 8px; border: 1px dashed rgba(76, 201, 240, 0.4);">
-          <h4 style="color: var(--neon-blue); font-size: 0.95rem; margin-bottom: 12px;">ARC Visual Grid Task: Diagonal Pattern Fill</h4>
-          
-          <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 15px;">
-            <div style="text-align: center; flex: 1; min-width: 140px;">
-              <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 6px;">Input Grid (Problem)</p>
-              <div style="display: inline-grid; grid-template-columns: repeat(3, 30px); gap: 2px; background: #111; padding: 6px; border-radius: 4px;">
-                <div style="width: 30px; height: 30px; background: #3b82f6;"></div> <div style="width: 30px; height: 30px; background: #000;"></div>
-                <div style="width: 30px; height: 30px; background: #000;"></div>
-                <div style="width: 30px; height: 30px; background: #000;"></div>
-                <div style="width: 30px; height: 30px; background: #000;"></div>
-                <div style="width: 30px; height: 30px; background: #000;"></div>
-                <div style="width: 30px; height: 30px; background: #000;"></div>
-                <div style="width: 30px; height: 30px; background: #000;"></div>
-                <div style="width: 30px; height: 30px; background: #3b82f6;"></div> </div>
-            </div>
+        <button class="sim-toggle-btn" onclick="toggleSimulation(this, 'sim-tcp')">
+          <span>🎮 Run Live Simulation</span>
+          <span class="chevron">&darr;</span>
+        </button>
 
-            <div style="text-align: center; flex: 1; min-width: 140px;">
-              <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 6px;">Current Workspace State</p>
-              <div style="display: inline-grid; grid-template-columns: repeat(3, 30px); gap: 2px; background: #111; padding: 6px; border-radius: 4px;" id="arc-workspace">
-                <div style="width: 30px; height: 30px; background: #3b82f6; transition: background 0.3s;"></div>
-                <div style="width: 30px; height: 30px; background: #000; transition: background 0.3s;"></div>
-                <div style="width: 30px; height: 30px; background: #000; transition: background 0.3s;"></div>
-                <div style="width: 30px; height: 30px; background: #000; transition: background 0.3s;"></div>
-                <div style="width: 30px; height: 30px; background: #000; transition: background 0.3s;"></div>
-                <div style="width: 30px; height: 30px; background: #000; transition: background 0.3s;"></div>
-                <div style="width: 30px; height: 30px; background: #000; transition: background 0.3s;"></div>
-                <div style="width: 30px; height: 30px; background: #000; transition: background 0.3s;"></div>
-                <div style="width: 30px; height: 30px; background: #3b82f6; transition: background 0.3s;"></div>
+        <div id="sim-tcp" class="sim-drawer">
+          <div style="padding: 20px;">
+            <h4 style="color: var(--neon-blue); font-size: 0.95rem; margin-bottom: 12px;">ARC Visual Grid Task: Diagonal Pattern Fill</h4>
+            
+            <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 15px;">
+              <div style="text-align: center; flex: 1; min-width: 140px;">
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 6px;">Input Grid (Problem)</p>
+                <div style="display: inline-grid; grid-template-columns: repeat(3, 30px); gap: 2px; background: #111; padding: 6px; border-radius: 4px;">
+                  <div style="width: 30px; height: 30px; background: #3b82f6;"></div> <div style="width: 30px; height: 30px; background: #000;"></div>
+                  <div style="width: 30px; height: 30px; background: #000;"></div>
+                  <div style="width: 30px; height: 30px; background: #000;"></div>
+                  <div style="width: 30px; height: 30px; background: #000;"></div>
+                  <div style="width: 30px; height: 30px; background: #000;"></div>
+                  <div style="width: 30px; height: 30px; background: #000;"></div>
+                  <div style="width: 30px; height: 30px; background: #000;"></div>
+                  <div style="width: 30px; height: 30px; background: #3b82f6;"></div>
+                </div>
+              </div>
+
+              <div style="text-align: center; flex: 1; min-width: 140px;">
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 6px;">Current Workspace State</p>
+                <div style="display: inline-grid; grid-template-columns: repeat(3, 30px); gap: 2px; background: #111; padding: 6px; border-radius: 4px;" id="arc-workspace">
+                  <div style="width: 30px; height: 30px; background: #3b82f6; transition: background 0.3s;"></div>
+                  <div style="width: 30px; height: 30px; background: #000; transition: background 0.3s;"></div>
+                  <div style="width: 30px; height: 30px; background: #000; transition: background 0.3s;"></div>
+                  <div style="width: 30px; height: 30px; background: #000; transition: background 0.3s;"></div>
+                  <div style="width: 30px; height: 30px; background: #000; transition: background 0.3s;"></div>
+                  <div style="width: 30px; height: 30px; background: #000; transition: background 0.3s;"></div>
+                  <div style="width: 30px; height: 30px; background: #000; transition: background 0.3s;"></div>
+                  <div style="width: 30px; height: 30px; background: #000; transition: transition 0.3s;"></div>
+                  <div style="width: 30px; height: 30px; background: #3b82f6; transition: background 0.3s;"></div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div style="font-family: monospace; font-size: 0.85rem; background: #060913; padding: 12px; border-radius: 6px; min-height: 80px; color: #a5b4fc; border: 1px solid rgba(255,255,255,0.05);" id="llm-terminal">
-            [System Status]: Ready. Target goal is to connect both blue corners with a diagonal line. Click below to initiate execution.
+            <div style="font-family: monospace; font-size: 0.85rem; background: #060913; padding: 12px; border-radius: 6px; min-height: 80px; color: #a5b4fc; border: 1px solid rgba(255,255,255,0.05);" id="llm-terminal">
+              [System Status]: Ready. Target goal is to connect both blue corners with a diagonal line. Click below to initiate execution.
+            </div>
+            <button type="button" onclick="runLLMSimulation()" style="margin-top: 12px; background: rgba(76, 201, 240, 0.2); border: 1px solid var(--neon-blue); color: #fff; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.85rem; font-weight: 600;">
+              Trigger Next Iteration Step
+            </button>
           </div>
-          <button type="button" onclick="runLLMSimulation()" style="margin-top: 12px; background: rgba(76, 201, 240, 0.2); border: 1px solid var(--neon-blue); color: #fff; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 0.85rem; font-weight: 600;">
-            Trigger Next Iteration Step
-          </button>
         </div>
 
-        <div class="tags">
+        <div class="tags" style="margin-top: 15px;">
           <span>Generative AI</span><span>LLM Reasoning</span><span>QLoRA</span><span>Fine-Tuning</span>
         </div>
       </div>
 
       <div class="card">
-        <span style="background: rgba(155, 93, 229, 0.1); color: var(--neon-purple); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">Deep Learning System</span>
-        <h3 style="margin-top: 10px;">How You Sound Like? Voice Synthesis Framework</h3>
-        <p style="margin-top: 8px;">Developed an end-to-end voice profile extraction engine matching user vocal signatures onto precise singer target acoustic profiles. Configured data streaming pipelines using Kafka handles.</p>
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: 10px;">
+          <span style="background: rgba(155, 93, 229, 0.1); color: var(--neon-purple); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">Deep Learning System</span>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Audio Engineering</span>
+        </div>
         
-        <div style="margin: 15px 0; padding: 15px; background: rgba(0,0,0,0.2); border-radius: 8px; border: 1px dashed rgba(155, 93, 229, 0.4); text-align: center;">
-          <h4 style="color: var(--neon-purple); font-size: 0.85rem; margin-bottom: 12px;">Real-Time Pipe Transform Simulator</h4>
-          
-          <div style="display: flex; justify-content: center; align-items: center; gap: 8px; margin-bottom: 15px; flex-wrap: wrap; font-size: 0.8rem;">
-            <div id="voice-source" style="padding: 6px 10px; background: rgba(255,255,255,0.05); border-radius: 4px; border: 1px solid #1e293b; white-space: nowrap;">Input Audio</div>
-            <div style="color: var(--neon-purple); font-weight: bold;">&rarr;</div>
-            <div style="padding: 6px 10px; background: rgba(255,255,255,0.05); border-radius: 4px; border: 1px solid #1e293b; color: #a5b4fc;">Kafka</div>
-            <div style="color: var(--neon-purple); font-weight: bold;">&rarr;</div>
-            <div id="voice-target" style="padding: 6px 12px; background: rgba(155,93,229,0.2); border-radius: 4px; border: 1px solid var(--neon-purple); flex: 1; min-width: 150px; color: var(--neon-purple); line-height: 1.4;">Synthesized Mix</div>
+        <h3 style="margin-top: 12px; font-size: 1.3rem;">How You Sound Like? Voice Synthesis Framework</h3>
+        
+        <p style="margin-top: 10px; line-height: 1.6;">
+          Developed an end-to-end voice profile extraction engine matching user vocal signatures onto precise singer target acoustic profiles. Configured high-performance real-time data streaming pipelines using Kafka event brokers.
+        </p>
+
+        <button class="sim-toggle-btn" onclick="toggleSimulation(this, 'sim-voice')">
+          <span>🎮 Run Live Simulation</span>
+          <span class="chevron">&darr;</span>
+        </button>
+
+        <div id="sim-voice" class="sim-drawer">
+          <div style="padding: 20px; text-align: center;">
+            <h4 style="color: var(--neon-purple); font-size: 0.85rem; margin-bottom: 12px;">Real-Time Pipe Transform Simulator</h4>
+            
+            <div style="display: flex; justify-content: center; align-items: center; gap: 8px; margin-bottom: 15px; flex-wrap: wrap; font-size: 0.8rem;">
+              <div id="voice-source" style="padding: 6px 10px; background: rgba(255,255,255,0.05); border-radius: 4px; border: 1px solid #1e293b; white-space: nowrap;">Input Audio</div>
+              <div style="color: var(--neon-purple); font-weight: bold;">&rarr;</div>
+              <div style="padding: 6px 10px; background: rgba(255,255,255,0.05); border-radius: 4px; border: 1px solid #1e293b; color: #a5b4fc;">Kafka</div>
+              <div style="color: var(--neon-purple); font-weight: bold;">&rarr;</div>
+              <div id="voice-target" style="padding: 6px 12px; background: rgba(155,93,229,0.2); border-radius: 4px; border: 1px solid var(--neon-purple); flex: 1; min-width: 150px; color: var(--neon-purple); line-height: 1.4;">Synthesized Mix</div>
+            </div>
+            
+            <button type="button" id="voice-btn" onclick="runVoiceSimulation()" style="background: rgba(155, 93, 229, 0.2); border: 1px solid var(--neon-purple); color: #fff; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-size: 0.85rem; width: 100%;">
+              Simulate Voice Pipeline
+            </button>
           </div>
-          
-          <button type="button" id="voice-btn" onclick="runVoiceSimulation()" style="background: rgba(155, 93, 229, 0.2); border: 1px solid var(--neon-purple); color: #fff; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 0.85rem; width: 100%;">
-            Simulate Voice Pipeline
-          </button>
         </div>
 
-        <div class="tags">
+        <div class="tags" style="margin-top: 15px;">
           <span>PyTorch</span><span>MelBandRoformer</span><span>Kafka</span><span>Gradio</span>
         </div>
       </div>
 
-<!-- Project 3: Driver Drowsiness -->
-      <div class="card">
-        <span style="background: rgba(76, 201, 240, 0.1); color: var(--neon-blue); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">Best Paper Award</span>
-        <h3 style="margin-top: 10px;">Driver Drowsiness Detection</h3>
-        <p style="color: var(--text-muted); font-size: 0.9rem; font-style: italic; margin-top: 2px;">Computer Vision & Transfer Learning</p>
-        <p style="margin-top: 10px;">A real-time vision processing utility analyzing live camera video streams to predict driver microsleep tendencies based on multi-frame facial features.</p>
+      <div class="card" style="border: 1px solid rgba(155, 93, 229, 0.2);">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: 10px;">
+          <span style="background: rgba(76, 201, 240, 0.1); color: var(--neon-blue); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">Best Paper Award</span>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Computer Vision</span>
+        </div>
+        
+        <h3 style="margin-top: 12px; font-size: 1.3rem;">Driver Drowsiness Detection</h3>
+        
+        <p style="margin-top: 10px; line-height: 1.6;">
+          A real-time vision processing utility analyzing live camera video streams to predict driver microsleep tendencies based on multi-frame facial landmark features.
+        </p>
 
-        <!-- 1. Publication Details (Placed first, right under description) -->
-        <div class="pub-card" style="border-left-color: var(--neon-purple); margin-top: 15px;">
+        <div class="pub-card" style="border-left-color: var(--neon-purple);">
           <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
             <span style="background: rgba(155, 93, 229, 0.15); color: var(--neon-purple); padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px;">Journal Article</span>
             <span style="font-size: 0.8rem; color: #a5b4fc; font-weight: bold;">ISETech 2023</span>
@@ -305,31 +376,44 @@
           </div>
         </div>
 
-        <!-- 2. Interactive Simulation (Placed second) -->
-        <div style="margin: 20px 0; padding: 15px; background: rgba(0,0,0,0.2); border-radius: 8px; border: 1px dashed rgba(76, 201, 240, 0.4); text-align: center;">
-          <h4 style="color: var(--neon-blue); font-size: 0.85rem; margin-bottom: 8px;">10-Frame Threshold Window Tester</h4>
-          <div style="font-size: 1.1rem; margin-bottom: 6px;">
-            State: <span id="driver-status" style="color: #4cc9f0; font-weight: bold;">Eyes Open👀</span>
+        <button class="sim-toggle-btn" onclick="toggleSimulation(this, 'sim-drowsy')">
+          <span>🎮 Run Live Simulation</span>
+          <span class="chevron">&darr;</span>
+        </button>
+
+        <div id="sim-drowsy" class="sim-drawer">
+          <div style="padding: 20px; text-align: center;">
+            <h4 style="color: var(--neon-blue); font-size: 0.85rem; margin-bottom: 8px;">10-Frame Threshold Window Tester</h4>
+            <div style="font-size: 1.1rem; margin-bottom: 6px;">
+              State: <span id="driver-status" style="color: #4cc9f0; font-weight: bold;">Eyes Open👀</span>
+            </div>
+            <div style="font-size: 0.85rem; margin-bottom: 12px; color: var(--text-muted);">
+              Consecutive Closed Frames: <span id="frame-count" style="color: #fff; font-weight: bold;">0</span> / 10
+            </div>
+            <button type="button" id="simulate-blink-btn" style="background: rgba(76, 201, 240, 0.2); border: 1px solid var(--neon-blue); color: #fff; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 0.85rem; user-select: none; display: inline-block;">
+              Press & Hold to Close Eyes
+            </button>
           </div>
-          <div style="font-size: 0.85rem; margin-bottom: 12px; color: var(--text-muted);">
-            Consecutive Closed Frames: <span id="frame-count" style="color: #fff; font-weight: bold;">0</span> / 10
-          </div>
-          <button type="button" id="simulate-blink-btn" style="background: rgba(76, 201, 240, 0.2); border: 1px solid var(--neon-blue); color: #fff; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 0.85rem; user-select: none;">
-            Press & Hold to Close Eyes
-          </button>
         </div>
         
-        <!-- 3. Tags & Footer Links -->
         <div class="tags" style="margin-top: 15px;">
           <span>Python</span><span>Computer Vision</span><span>Deep Learning</span>
         </div>
       </div>
 
       <div class="card">
-        <h3>Sentiment Analysis Engine</h3>
-        <p style="color: var(--text-muted); font-size: 0.9rem; font-style: italic; margin-top: 2px;">Natural Language Processing</p>
-        <p style="margin-top: 10px;">Conducted semantic web scraping across digital channels to extract, classify, and track key public evaluation trends related to Malaysia Airlines flight services.</p>
-        <div class="tags">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: 10px;">
+          <span style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem;">Natural Language Processing</span>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Web Extraction</span>
+        </div>
+        
+        <h3 style="margin-top: 12px; font-size: 1.3rem;">Sentiment Analysis Engine</h3>
+        
+        <p style="margin-top: 10px; line-height: 1.6;">
+          Conducted semantic web scraping across digital channels to extract, classify, and track key public evaluation trends related to Malaysia Airlines flight services.
+        </p>
+        
+        <div class="tags" style="margin-top: 15px;">
           <span>Python</span><span>NLP</span><span>RapidMiner</span><span>Data Analysis</span>
         </div>
         <div class="links-container" style="margin-top: 15px;">
@@ -355,6 +439,23 @@
   </div>
 
   <script>
+    // --- NEW: COLLAPSIBLE SIMULATION DRAWER UTILITY ---
+    function toggleSimulation(button, drawerId) {
+      const drawer = document.getElementById(drawerId);
+      const chevron = button.querySelector('.chevron');
+      
+      button.classList.toggle('active');
+      drawer.classList.toggle('open');
+      
+      if (drawer.classList.contains('open')) {
+        chevron.innerHTML = '&uarr;';
+        button.querySelector('span').innerText = '🎮 Hide Simulation';
+      } else {
+        chevron.innerHTML = '&darr;';
+        button.querySelector('span').innerText = '🎮 Run Live Simulation';
+      }
+    }
+
     // --- 1. CRITIC GUIDED REASONING SIMULATOR (WITH ARC GRID DYNAMICS) ---
     let steps = 0;
     function runLLMSimulation() {
@@ -364,18 +465,15 @@
       steps++;
       
       if(steps === 1) {
-        // Step 1: Simulated Incorrect Code Run (Fills middle block instead of diagonal)
-        blocks[4].style.backgroundColor = "#ff3366"; // Incorrect red block in center
+        blocks[4].style.backgroundColor = "#ff3366"; 
         term.innerHTML = "<span style='color:#38bdf8'>[Step 1: Program Synthesis]</span> LLM synthesized initial code matrix.<br><span style='color:#f43f5e'>[Execution Error]</span> Program plotted at spatial index [1,1] with incorrect color index (Red) instead of joining the diagonal path.";
       } else if (steps === 2) {
-        // Step 2: Critic Agent steps in, marks the issue, removes the incorrect action
-        blocks[4].style.backgroundColor = "#000"; // Clear center error block
+        blocks[4].style.backgroundColor = "#000"; 
         term.innerHTML = "<span style='color:#a855f7'>[Step 2: Critic Agent feedback]</span> Detected invalid color path mapping. Backtracking execution trace. Removing incorrect node from trace stack... Preparing refinement prompt.";
       } else if (steps === 3) {
-        // Step 3: Correct synthesis runs and completes the diagonal connecting line
-        blocks[4].style.backgroundColor = "#3b82f6"; // Correctly fill the diagonal path
+        blocks[4].style.backgroundColor = "#3b82f6"; 
         term.innerHTML = "<span style='color:#34d399'>[Step 3: Successful Correction]</span> Executing correction prompt! Re-evaluating spatial transform path. Target sequence achieved successfully! Program verified and saved.";
-        steps = 0; // reset loop
+        steps = 0; 
       }
     }
 
@@ -400,7 +498,6 @@
       tgt.style.color = "var(--neon-purple)";
       
       setTimeout(() => {
-        // Randomly grab a target artist from database config arrays
         const selection = targetArtists[Math.floor(Math.random() * targetArtists.length)];
         
         src.style.background = "rgba(255,255,255,0.05)";
