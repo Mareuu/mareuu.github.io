@@ -197,22 +197,20 @@
       </div>
 
 <!-- Project 2: Voice Synthesis (Interactive Player Simulator showing Matches) -->
-      <div class="card">
+<div class="card">
         <span style="background: rgba(155, 93, 229, 0.1); color: var(--neon-purple); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">Deep Learning System</span>
         <h3 style="margin-top: 10px;">How You Sound Like? Voice Synthesis Framework</h3>
-        <p style="margin-top: 8px;">Developed an end-to-end voice profile extraction engine matching user vocal signatures onto precise singer target acoustic profiles[cite: 4]. Configured data streaming pipelines using Kafka handles[cite: 4].</p>
+        <p style="margin-top: 8px;">Developed an end-to-end voice profile extraction engine matching user vocal signatures onto precise singer target acoustic profiles. Configured data streaming pipelines using Kafka handles.</p>
         
-        <!-- SIMULATION 2: Voice Transform Mixer -->
         <div style="margin: 15px 0; padding: 15px; background: rgba(0,0,0,0.2); border-radius: 8px; border: 1px dashed rgba(155, 93, 229, 0.4); text-align: center;">
           <h4 style="color: var(--neon-purple); font-size: 0.85rem; margin-bottom: 12px;">🎵 Real-Time Pipe Transform Simulator</h4>
           
-          <!-- Unified Data Flow Row -->
-          <div style="display: flex; justify-content: center; align-items: center; gap: 8px; margin-bottom: 15px; flex-wrap: nowrap; font-size: 0.8rem;">
+          <div style="display: flex; justify-content: center; align-items: center; gap: 8px; margin-bottom: 15px; flex-wrap: wrap; font-size: 0.8rem;">
             <div id="voice-source" style="padding: 6px 10px; background: rgba(255,255,255,0.05); border-radius: 4px; border: 1px solid #1e293b; white-space: nowrap;">🎤 Input Audio</div>
             <div style="color: var(--neon-purple); font-weight: bold;">&rarr;</div>
             <div style="padding: 6px 10px; background: rgba(255,255,255,0.05); border-radius: 4px; border: 1px solid #1e293b; color: #a5b4fc;">Kafka</div>
             <div style="color: var(--neon-purple); font-weight: bold;">&rarr;</div>
-            <div id="voice-target" style="padding: 6px 10px; background: rgba(155,93,229,0.2); border-radius: 4px; border: 1px solid var(--neon-purple); min-width: 120px; white-space: nowrap; color: var(--neon-purple);">⚡ Synthesized Mix</div>
+            <div id="voice-target" style="padding: 6px 12px; background: rgba(155,93,229,0.2); border-radius: 4px; border: 1px solid var(--neon-purple); flex: 1; min-width: 150px; color: var(--neon-purple); line-height: 1.4;">⚡ Synthesized Mix</div>
           </div>
           
           <button type="button" id="voice-btn" onclick="runVoiceSimulation()" style="background: rgba(155, 93, 229, 0.2); border: 1px solid var(--neon-purple); color: #fff; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 0.85rem; width: 100%;">
@@ -221,7 +219,7 @@
         </div>
 
         <div class="tags">
-          <span>PyTorch</span><span>MelBandRoformer</span><span>Kafka</span><span>Gradio</span>[cite: 4]
+          <span>PyTorch</span><span>MelBandRoformer</span><span>Kafka</span><span>Gradio</span>
         </div>
       </div>
 
