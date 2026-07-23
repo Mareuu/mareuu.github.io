@@ -107,7 +107,7 @@
 
   <div id="home" class="tab-content active container">
     <section class="hero">
-      <img src="assets/images/여권인터넷발급용.jpg" alt="Marha Midhatiey" class="avatar"/>
+      <img src="assets/images/여권인터넷발급용.jpg" alt="Marha Midhatiey" class="avatar"/>
       <h1>Hello, I'm MARHA</h1>
       <p class="subtitle" style="margin-bottom: 25px;">AI Engineer | Applied AI Research | LLMs & Reasoning</p>
       
@@ -289,7 +289,7 @@
                   <div style="width: 30px; height: 30px; background: #000; transition: background 0.3s;"></div>
                   <div style="width: 30px; height: 30px; background: #000; transition: background 0.3s;"></div>
                   <div style="width: 30px; height: 30px; background: #000; transition: background 0.3s;"></div>
-                  <div style="width: 30px; height: 30px; background: #000; transition: transition 0.3s;"></div>
+                  <div style="width: 30px; height: 30px; background: #000; transition: background 0.3s;"></div>
                   <div style="width: 30px; height: 30px; background: #3b82f6; transition: background 0.3s;"></div>
                 </div>
               </div>
@@ -439,7 +439,7 @@
   </div>
 
   <script>
-    // --- NEW: COLLAPSIBLE SIMULATION DRAWER UTILITY ---
+    // --- COLLAPSIBLE SIMULATION DRAWER UTILITY ---
     function toggleSimulation(button, drawerId) {
       const drawer = document.getElementById(drawerId);
       const chevron = button.querySelector('.chevron');
@@ -515,10 +515,12 @@
     let intervalId = null;
     let frameCount = 0;
 
-    blinkBtn.addEventListener('mousedown', startBlink);
-    blinkBtn.addEventListener('touchstart', startBlink);
-    window.addEventListener('mouseup', endBlink);
-    window.addEventListener('touchend', endBlink);
+    if (blinkBtn) {
+      blinkBtn.addEventListener('mousedown', startBlink);
+      blinkBtn.addEventListener('touchstart', startBlink);
+      window.addEventListener('mouseup', endBlink);
+      window.addEventListener('touchend', endBlink);
+    }
 
     function startBlink(e) {
       e.preventDefault();
